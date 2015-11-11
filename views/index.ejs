@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>My App</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<header>
+		<% include header %>
+	</header>
+	
+	<footer>
+		<% include footer %>
+	</footer>
+</body>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var socket = io.connect('http://127.0.0.1:2121');
+	socket.on('connect', function(data) {
+		console.log(data);
+		socket.emit('join', 'Hello World from client');
+	});
+</script>
+</html>
