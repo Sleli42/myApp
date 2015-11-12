@@ -3,11 +3,14 @@
 <head>
 	<%include head %>
 	<style>
-		body		{ padding-top: 250px; }
+		body		{ padding-top: 180px; }
 		hr 			{ border: 0;
     				  height: 0;
     				  border-top: 1px solid rgba(0, 0, 0, 0.1);
     				  border-bottom: 1px solid rgba(255, 255, 255, 0.3);}
+    	a.colorLink 		{ color: #454447; }
+    	a.colorLink:hover	{ color: #4e2a74; }
+    	button.btn-block 	{ color: #5f4b74; }
 	</style>
 </head>
 <body>
@@ -27,14 +30,14 @@
 					<label>Password</label>
 					<input type="text" class="form-control" name="password" placeholder="Password">
 				</div>
-
-				<button type="submit" class="btn btn-warning btn-lg">Log in</button>
+									<br>
+				<button type="submit" class="btn btn-block">Log in</button>
 			</form>
 
 			<hr>
 
-			<p>Need an account ? <a href="/signup"></a></p>
-			<p>Or go <a href="/">Home</a>.</p>
+			<p>Need an account ? <a href="/signup" class="colorLink">Sign in</a> !</p>
+			<p>Or go <a href="/" class="colorLink">Home</a> !</p>
 		</div>
 	</div>
 	<footer>

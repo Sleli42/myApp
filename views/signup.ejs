@@ -3,7 +3,14 @@
 <head>
 	<%include head %>
 	<style>
-		body		{ padding-top: 250px; }
+		body		{ padding-top: 180px; }
+		hr 			{ border: 0;
+    				  height: 0;
+    				  border-top: 1px solid rgba(0, 0, 0, 0.1);
+    				  border-bottom: 1px solid rgba(255, 255, 255, 0.3);}
+    	a.colorLink 		{ color: #454447; }
+    	a.colorLink:hover	{ color: #4e2a74; }
+    	button.btn-block 	{ color: #5f4b74; }
 	</style>
 </head>
 <body>
@@ -11,11 +18,26 @@
 		<%include header %>
 	</header>
 	<div class="container">
-		<div class="jumbotron text-center">
-			<h1><span class="fa fa-lock"></span> Authentication</h1>
-			<p>Login or Register with:</p>
-			<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local login</a>
-			<a href="/register" class="btn btn-default"><span class="fa fa-user"></span> Local register</a>
+		<div class="col-sm-6 col-sm-offset-3">
+			<h1><span class="fa fa-sign-in"></span> Sign up</h1>
+			<!-- LOGIN FORMS -->
+			<form action="/login" method="post">
+				<div class="form-group">
+					<label>Email</label>
+					<input type="text" class="form-control" name="email" placeholder="E-mail">
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="text" class="form-control" name="password" placeholder="Password">
+				</div>
+									<br>
+				<button type="submit" class="btn btn-block">Log in</button>
+			</form>
+
+			<hr>
+
+			<p>Already have an account ? <a href="/signup" class="colorLink">Log in</a> !</p>
+			<p>Or go <a href="/" class="colorLink">Home</a> !</p>
 		</div>
 	</div>
 	<footer>
