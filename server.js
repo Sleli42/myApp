@@ -11,8 +11,10 @@ var session = require('express-session');
 //==== CONFIG DB
 //var configDB = require('./uploads/database.js');
 //mongoose.connect(configDB.url);
+
 mongoose.connect('mongodb://127.0.0.1:27017/db', function(err) {
-  if (err) { throw err; }
+  if (err)
+  	console.log(err);
 });
 
 /*
