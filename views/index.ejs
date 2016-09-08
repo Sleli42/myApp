@@ -1,90 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<%include head %>
-	<style>
-		body		{ padding-top: 180px;}
-		.thumbnail	{ height: 200px;
-						width: 400px; }
-		hr 			{/* margin-top: 20px;*/
-					  border: 0;
-    				  height: 0;
-    				  border-top: 1px solid rgba(0, 0, 0, 0.1);
-    				  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    				}
-    	p			{ text-align: center;
-    					padding-top: 5px;}
-    	img			{ width: 270px; }
-	</style>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<% include head %>
 </head>
 <body>
 	<header>
-		<%include header %>
+		<% include header %>
 	</header>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-1">
-			<a href="#" class="thumbnail">
-				<!-- <img src="https://i.ytimg.com/vi/pYxxWUXY7Qw/maxresdefault.jpg" class="image"> -->
-				<p>Counter GO</p>
-			</a>
-		</div>
-		<div class="col-sm-4 col-sm-offset-2">
-			<a href="#" class="thumbnail">
-				<!-- <img src="http://img1.gtsstatic.com/wallpapers/67f51d4505e3813be79c0f9cc750edeb_large.jpeg"> -->
-				<p>League of Legend GO</p>
-			</a>
-		</div>
+<div class="acceuil-page">
+	<div class="bloc-principal">
+		<main class="content">
+
+		</main>
 	</div>
-	<hr>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-1">
-			<a href="#" class="thumbnail"></a>
-		</div>
-		<div class="col-sm-4 col-sm-offset-2">
-			<a href="#" class="thumbnail"></a>
-		</div>
-	</div>
-	<hr>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-1">
-			<a href="#" class="thumbnail"></a>
-		</div>
-		<div class="col-sm-4 col-sm-offset-2">
-			<a href="#" class="thumbnail"></a>
-		</div>
-	</div>
-	<hr>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-1">
-			<a href="#" class="thumbnail"></a>
-		</div>
-		<div class="col-sm-4 col-sm-offset-2">
-			<a href="#" class="thumbnail"></a>
-		</div>
-	</div>
-<!-- 	<hr>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-1">
-			<a href="#" class="thumbnail"></a>
-		</div>
-		<div class="col-sm-4 col-sm-offset-2">
-			<a href="#" class="thumbnail"></a>
-		</div>
-	</div> -->
-	<br><br><br><br><br><br><br><br>
-	<footer>
-		<%include footer %>
-	</footer>
+</div>
 </body>
-<script src="/socket.io/socket.io.js"></script>
-<script>
-	var socket = io.connect('http://127.0.0.1:2121');
-	socket.on('connect', function(data) {
-		console.log(data);
-		socket.emit('join', 'Hello from client');
-	});
-	socket.on('message', function(data) {
-		alert(data);
-	})
-</script>
+<footer>
+	<% include footer %>
+</footer>
 </html>

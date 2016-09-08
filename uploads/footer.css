@@ -1,0 +1,11 @@
+.footer {
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.footer .container-fluid {
+	margin: 0 5% 0 5%;
+}
