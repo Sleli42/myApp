@@ -1,48 +1,42 @@
-html, body { height: 100px;}
+html, body { 
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
 
 body    {
     background-color: #8f809f;
 }
 
-header {
-    height: 170px;
+.header {
+    height: 100px;
+    display: block;
 }
 
 header nav { height: 120px;}
         a   { color: #8f809f; }
         a:hover { color: #8f809f; }
 
-.acceuil-page {
-    min-height: 100%;
-    position: relative;
+.contenu{
+    display: block;
+    height: 935px;
 }
 
 .bloc-principal {
-    padding-bottom: 100px;
+    width: 70%;
+    float: right;
 }
 
-.navbar-form {
-	margin-top: 60px;
-}
-
-.placeholder {
-	margin-left: 40px;
-	text-align: center;
-	color: #CCC;
-  	font-size: 20px;
+.sidebar-left {
+    width: 30%;
+    float: left;
+    display: block;
+    height: 85%;
 }
 
 .footer {
-    height: 100px;
-    position: absolute;
+    height: 50px;
+    display: block;
     background-color: #c3c3c3;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
-.footer i {
-    margin-top: 50%;
-    margin-bottom: 50%;
-    color: #8f809f;
-}
